@@ -1,0 +1,28 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: cartservice
+  cloud:
+    discovery:
+      enabled: true
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:carts
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+eureka:
+  instance:
+    hostname: localhost
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
+#    instance:
+#    preferIpAddress: true

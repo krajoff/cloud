@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items</title>
+</head>
+<body>
+<h1>Items:</h1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    <tr th:each="items: ${items}">
+        <td th:text="${items.id}"></td>
+        <td th:text="${items.name}"></td>
+        <td th:text="${items.price}"></td>
+    </tr>
+</table>
+</body>
+</html>
